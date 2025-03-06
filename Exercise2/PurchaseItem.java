@@ -14,7 +14,6 @@ public class PurchaseItem {
         this.unitPrice = 0.0;
     }
 
-    // Getters and Setters (Accessor and Mutator methods)
     public String getName() {
         return name;
     }
@@ -31,12 +30,10 @@ public class PurchaseItem {
         this.unitPrice = unitPrice;
     }
 
-    // Method to get the price (unit price)
     public double getPrice() {
         return unitPrice;
     }
 
-    // toString method to return a string representation
     @Override
     public String toString() {
         return name + " @ " + unitPrice;

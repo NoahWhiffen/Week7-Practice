@@ -1,5 +1,5 @@
 public class WeighedItem extends PurchaseItem {
-    private double weight; // weight in kg
+    private double weight;
 
     // Constructor for WeighedItem, using the superclass constructor
     public WeighedItem(String name, double unitPrice, double weight) {
@@ -7,7 +7,6 @@ public class WeighedItem extends PurchaseItem {
         this.weight = weight;
     }
 
-    // Getter and setter for weight
     public double getWeight() {
         return weight;
     }
@@ -16,13 +15,11 @@ public class WeighedItem extends PurchaseItem {
         this.weight = weight;
     }
 
-    // Overriding getPrice method to calculate price based on weight
     @Override
     public double getPrice() {
-        return getUnitPrice() * weight; // price = unit price * weight
+        return getUnitPrice() * weight;
     }
 
-    // Overriding toString method to return a receipt-friendly string
     @Override
     public String toString() {
         return super.toString() + " (Weight: " + weight + "kg) - Total: " + getPrice();
